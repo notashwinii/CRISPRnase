@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    // ...
+    "tsx": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+    // ...
+  }
+}
