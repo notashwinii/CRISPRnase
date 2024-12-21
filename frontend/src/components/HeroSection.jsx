@@ -7,13 +7,11 @@ const HeroSection = () => {
       <div className="relative z-10 gap-5 items-center lg:flex">
         <div className="flex-1 max-w-lg py-5 sm:mx-auto sm:text-center lg:max-w-max lg:text-left">
           <h3 className="text-3xl text-gray-800 font-semibold md:text-4xl">
-            build your websites with{" "}
-            <span className="text-blue-600">high performance</span>
+            Revolutionizing Healthcare with precise {" "}
+            <span className="text-blue-600">Gene Editing</span>
           </h3>
           <p className="text-gray-500 leading-relaxed mt-3">
-            Nam erat risus, sodales sit amet lobortis ut, finibus eget metus.
-            Cras aliquam ante ut tortor posuere feugiat. Duis sodales nisi id
-            porta lacinia.
+           Empowering medical researchers to combat genetic diseases by designing highly efficient and accurate gRNAs for CRISPR-based therapies.
           </p>
           <a
             className="mt-5 px-4 py-2 text-blue-600 font-medium bg-indigo-50 rounded-full inline-flex items-center"
@@ -38,9 +36,9 @@ const HeroSection = () => {
         </div>
         <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
           <img
-            src="https://i.postimg.cc/kgd4WhyS/container.png"
+            src="/crispr.webp"
             alt=""
-            className="w-full"
+            className="w-full h-full"
           />
         </div>
       </div>

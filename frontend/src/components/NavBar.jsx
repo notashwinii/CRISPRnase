@@ -11,14 +11,12 @@ const Navbar = () => {
           <Button variant="ghost" className="hover:text-blue-800">
             sgRNA Design
           </Button>
+          
           <Button variant="ghost" className="hover:text-blue-800">
-            How to use
+           About CRISPR
           </Button>
           <Button variant="ghost" className="hover:text-blue-800">
-            Gene Input
-          </Button>
-          <Button variant="ghost" className="hover:text-blue-800">
-            How it works
+            How to Use
           </Button>
         </nav>
       </div>
