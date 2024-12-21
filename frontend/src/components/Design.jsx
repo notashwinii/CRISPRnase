@@ -56,7 +56,7 @@ const Design = () => {
     setIsLoading(false)
 
     // Wait for an additional 5 seconds before navigating
-    await new Promise(resolve => setTimeout(resolve, 5000)) // Wait 5 seconds
+    await new Promise(resolve => setTimeout(resolve, 1000)) // Wait 5 seconds
 
     // Navigate to the results page
     handleButtonClick()
