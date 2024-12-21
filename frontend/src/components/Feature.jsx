@@ -54,8 +54,8 @@ export default function Feature() {
               Simple solutions for complex issues
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              congue, nisl eget molestie varius, enim ex faucibus purus
+              Our product simplifies CRISPR gene editing, empowering skilled
+              individuals to tackle genetic disorders with ease and precision
             </p>
           </div>
           <div className="mt-12 max-w-lg lg:max-w-none">
@@ -81,7 +81,7 @@ export default function Feature() {
         </div>
         <div className="mt-12 lg:mt-0">
           <img
-            src="https://raw.githubusercontent.com/sidiDev/remote-assets/main/Safari%20(Big%20Sur)%20-%20Light.png"
+            src="website.png"
             className="w-full shadow-lg rounded-lg border"
           />
         </div>
