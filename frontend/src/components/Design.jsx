@@ -54,11 +54,6 @@ const Design = () => {
   };
 
   const handleAnalyze = async () => {
-    if (!validateDnaSequence(dnaSequence)) {
-      setError("Invalid DNA sequence. Please use only A, T, C, and G.");
-      return;
-    }
-    setError("");
     setIsLoading(true);
 
     // Simulate API call or some processing
@@ -84,9 +79,6 @@ const Design = () => {
 
   const handleDnaSequenceChange = (e) => {
     setDnaSequence(e.target.value);
-    if (error) {
-      setError("");
-    }
   };
 
   const isAnalyzeDisabled = !validateDnaSequence(dnaSequence) || isLoading;

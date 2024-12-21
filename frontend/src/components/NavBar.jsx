@@ -13,7 +13,7 @@ const Navbar = () => {
         </button>
         <nav className="hidden md:flex items-center space-x-6 text-blue-600">
           <Button variant="ghost" className="hover:text-blue-800">
-            sgRNA Design
+            gRNA Design
           </Button>
 
           <Button variant="ghost" className="hover:text-blue-800">
