@@ -1,30 +1,86 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Textarea } from "@/components/ui/textarea";
-import { Upload } from "lucide-react";
-import Navbar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
-import Footer from "@/components/Footer";
 import Feature from "@/components/Feature";
 import HowToUse from "@/components/HowToUse";
 import Design from "@/components/Design";
 
-
 export default function Home() {
+  const features = [
+    {
+      avatar: "search.png",
+      title: `Sequence Input`,
+      desc: `
+
+                CRISPRnase accepts gene sequences through direct input or file
+                upload, supporting various file formats.
+
+`,
+    },
+    {
+      avatar: "analyze.png",
+      title: `Analysis`,
+      desc: `
+
+                Our advanced algorithms analyze the sequence, identifying key
+                features and potential CRISPR target sites.
+`,
+    },
+    {
+      avatar: "results.png",
+      title: `
+   Results
+`,
+      desc: `
+                CRISPRnase provides detailed insights, including potential
+                off-target effects and efficiency predictions.
+
+`,
+    },
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50">
       <main className="container mx-auto px-4 py-8">
         <HeroSection />
         <div>
-<Design/>
-
+          <Design />
         </div>
 
         <Feature />
-        <section id="howtouse">
+
+        <section id="whatweprovide">
+          <div className="flex items-center justify-center">
+            <p className="hr  mt-12 text-3xl font-semibold text-blue-600">
+              How CRISPRnase Works
+            </p>
+          </div>
+
+          <div className="mx-auto mt-12 max-w-[var(--screen-max)]">
+            <ul className="grid place-items-center gap-4 sm:grid-cols-2 md:grid-cols-3">
+              {features.map((item, idx) => (
+                <li key={idx} className="w-full bg-[#2561c1]  p-4  rounded-lg">
+                  <div className="mx-auto h-24 w-24 rounded-full bg-white p-2">
+                    <img
+                      src={item.avatar}
+                      className="h-full w-full rounded-full object-cover"
+                      alt=""
+                    />
+                  </div>
+                  <div className="mt-2">
+                    <h4 className="font-semibold text-white sm:text-lg ">
+                      {item.name}
+                    </h4>
+                    <p className="text-center text-2xl font-semibold text-white">
+                      {item.title}
+                    </p>
+                    <p className="mt-2 text-white font-medium">{item.desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="container max-w-[80%] mx-auto" id="howtouse">
           <div className="flex items-center justify-center">
             <p className="hr  mt-12 text-4xl font-semibold text-blue-500 ">
               How to use
@@ -32,37 +88,6 @@ export default function Home() {
           </div>
 
           <HowToUse />
-        </section>
-
-        <section id="how-it-works" className="mb-12">
-          <h2 className="text-2xl font-semibold text-blue-700 mb-4">
-            How CRISPRnase Works
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold text-blue-600 mb-2">
-                1. Sequence Input
-              </h3>
-              <p className="text-gray-600">
-                CRISPRnase accepts gene sequences through direct input or file
-                upload, supporting various file formats.
-              </p>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold text-blue-600 mb-2">2. Analysis</h3>
-              <p className="text-gray-600">
-                Our advanced algorithms analyze the sequence, identifying key
-                features and potential CRISPR target sites.
-              </p>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold text-blue-600 mb-2">3. Results</h3>
-              <p className="text-gray-600">
-                CRISPRnase provides detailed insights, including potential
-                off-target effects and efficiency predictions.
-              </p>
-            </div>
-          </div>
         </section>
       </main>
     </div>
