@@ -16,10 +16,12 @@ import Design from "@/components/Design";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50">
-<Navbar/>
       <main className="container mx-auto px-4 py-8">
         <HeroSection />
+        <div>
 <Design/>
+
+        </div>
 
         <Feature />
         <section id="howtouse">
@@ -63,7 +65,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-<Footer/>
     </div>
   );
 }

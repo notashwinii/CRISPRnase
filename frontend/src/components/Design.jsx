@@ -1,9 +1,9 @@
+
 import React, { useState } from 'react'
 import { HelpCircle, Loader2 } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
 import {
   Select,
   SelectContent,
@@ -17,14 +17,21 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { useNavigate } from "react-router-dom";
 
-const casTypes = [
-  { value: 'SpCas9', label: 'SpCas9', description: 'The most common CRISPR enzyme' },
-  { value: 'AsCas12a', label: 'AsCas12a', description: 'Also known as Cpf1, requires a T-rich PAM sequence' },
-  { value: 'Cpf1', label: 'Cpf1', description: 'Alternative name for AsCas12a' },
-]
+const Design = () => {
+  const navigate = useNavigate();
 
-export default function Design() {
+  const handleButtonClick = () => {
+    navigate("/result");
+  };
+
+  const casTypes = [
+    { value: 'SpCas9', label: 'SpCas9', description: 'The most common CRISPR enzyme' },
+    { value: 'AsCas12a', label: 'AsCas12a', description: 'Also known as Cpf1, requires a T-rich PAM sequence' },
+    { value: 'Cpf1', label: 'Cpf1', description: 'Alternative name for AsCas12a' },
+  ];
+
   const [dnaSequence, setDnaSequence] = useState('')
   const [casType, setCasType] = useState('SpCas9')
   const [isLoading, setIsLoading] = useState(false)
@@ -42,9 +49,18 @@ export default function Design() {
     }
     setError('')
     setIsLoading(true)
-    // Simulating API call
-    await new Promise(resolve => setTimeout(resolve, 2000))
+
+    // Simulate API call or some processing
+    await new Promise(resolve => setTimeout(resolve, 2000)) // Simulate initial processing time
+
     setIsLoading(false)
+
+    // Wait for an additional 5 seconds before navigating
+    await new Promise(resolve => setTimeout(resolve, 5000)) // Wait 5 seconds
+
+    // Navigate to the results page
+    handleButtonClick()
+
     // Handle the analysis result here
     console.log('Analyzing:', { dnaSequence, casType })
   }
@@ -108,7 +124,7 @@ export default function Design() {
       </div>
 
       <div className="flex space-x-4">
-        <Button onClick={handleAnalyze} disabled={isAnalyzeDisabled}>
+        <Button onClick={handleAnalyze} disabled={isLoading}>
           {isLoading ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -123,6 +139,8 @@ export default function Design() {
         </Button>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default Design;
 
