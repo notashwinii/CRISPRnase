@@ -10,62 +10,18 @@ import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
 import Feature from "@/components/Feature";
 import HowToUse from "@/components/HowToUse";
+import Design from "@/components/Design";
+
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-green-50">
-      <Navbar />
-
+<Navbar/>
       <main className="container mx-auto px-4 py-8">
         <HeroSection />
+<Design/>
 
-
-        {/* <section */}
-        {/*   id="gene-input" */}
-        {/*   className="mb-12 bg-white p-6 rounded-lg shadow-md" */}
-        {/* > */}
-        {/*   <h2 className="text-2xl font-semibold text-blue-700 mb-4"> */}
-        {/*     Gene Sequence Input */}
-        {/*   </h2> */}
-        {/*   <form className="space-y-4"> */}
-        {/*     <div> */}
-        {/*       <Label htmlFor="gene-sequence">Enter Gene Sequence</Label> */}
-        {/*       <Textarea */}
-        {/*         id="gene-sequence" */}
-        {/*         placeholder="Paste your gene sequence here..." */}
-        {/*         className="mt-1" */}
-        {/*       /> */}
-        {/*     </div> */}
-        {/*     <div> */}
-        {/*       <Label htmlFor="file-upload" className="block mb-2"> */}
-        {/*         Or Upload a File */}
-        {/*       </Label> */}
-        {/*       <div className="flex items-center space-x-2"> */}
-        {/*         <Input id="file-upload" type="file" className="hidden" /> */}
-        {/*         <Button type="button" variant="outline" className="w-full"> */}
-        {/*           <Upload className="mr-2 h-4 w-4" /> Upload File */}
-        {/*         </Button> */}
-        {/*       </div> */}
-        {/*     </div> */}
-        {/*     <div> */}
-        {/*       <Label>Gene Type</Label> */}
-        {/*       <RadioGroup defaultValue="human" className="flex space-x-4 mt-1"> */}
-        {/*         <div className="flex items-center space-x-2"> */}
-        {/*           <RadioGroupItem value="human" id="human" /> */}
-        {/*           <Label htmlFor="human">Human</Label> */}
-        {/*         </div> */}
-        {/*         <div className="flex items-center space-x-2"> */}
-        {/*           <RadioGroupItem value="non-human" id="non-human" /> */}
-        {/*           <Label htmlFor="non-human">Non-Human</Label> */}
-        {/*         </div> */}
-        {/*       </RadioGroup> */}
-        {/*     </div> */}
-        {/*     <Button type="submit" className="w-full"> */}
-        {/*       Analyze Sequence */}
-        {/*     </Button> */}
-        {/*   </form> */}
-        {/* </section> */}
-        {/* <Feature /> */}
+        <Feature />
         <section id="howtouse">
           <div className="flex items-center justify-center">
             <p className="hr  mt-12 text-4xl font-semibold text-blue-500 ">
@@ -107,8 +63,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <Footer />
+<Footer/>
     </div>
   );
 }
